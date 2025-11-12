@@ -1,5 +1,6 @@
 <script>
-    let { data, cwd } = $props();
+    // the way to go about this is, in your given display grid, you get the import 
+    let { image, title, description } = $props();
 
     // const imageRightAlign = Math.random() > 0.5;
     const imageAlign = Math.random() > 0.5;
@@ -41,17 +42,13 @@
 
 <!-- has slug, title, img_src -- needs desc? -->
 <div style={`height: 100vh; background-color:${mainColor};`}>
- <h1>{data.post.title}</h1>
+ <h1>{title}</h1>
 
  <div class={["image-container", (imageAlign? "imageRightAlign": "imageLeftAlign")]}>
-    {#if cwd==="knitting"} <!-- /{data.post.src} -->
-        <img src="src/lib/assets/ravelry/1898_hat.jpg" style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
-    {:else}
-        <img src="src/lib/assets/1898.jpg" style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
-    {/if}
+    <img src={image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
  </div>
 
 <p>
-    {data.post.description}
+    {description}
 </p>
 </div>
