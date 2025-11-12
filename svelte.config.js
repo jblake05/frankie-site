@@ -36,7 +36,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH // remove when frankie makes their own github account and we transfer the repo
 		}
 	}
 };
