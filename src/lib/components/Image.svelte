@@ -13,6 +13,12 @@
         display: inline-flex;
         height: auto;
     }
+
+    img:hover {
+        transform: scale(1.4);
+        transition: transform 0.3s;
+        z-index: 100;
+    }
 </style>
 <!-- height: ${r(50, 500)}px; --> 
  <!-- goal: make image particles -->

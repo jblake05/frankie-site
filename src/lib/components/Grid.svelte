@@ -44,6 +44,17 @@
     .cell {
         text-align: center;
         flex: 1;
+        /* filter: brightness(100%); */
+    }
+
+    img {
+        filter: brightness(100%);
+    }
+
+    img:hover {
+        cursor: pointer;
+        filter: brightness(50%);
+        transition: ease 0.3s all;
     }
 </style>
 
@@ -58,10 +69,10 @@
 
     {#each data.summaries as {slug, title, src}}
         <div class="cell" id={title} style="filter: brightness(100%);" onmouseenter={()=> {
-            setBrightness(title, 50);
+            // setBrightness(title, 50);
         }}
         onmouseleave={()=>{
-            setBrightness(title, 100);
+            // ssetBrightness(title, 100);
         }}>            
         <!-- todo: make this routing dynamic depending on subfolder -->
         <!-- use enhanced:img here and pass as a param like in Entry/(knitting/[slug])? -->

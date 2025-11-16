@@ -64,6 +64,7 @@
         <h2>welcome text</h2>
     </div>
 
+    <!-- TODO: make each image get bigger when you hover over them? Use grid.svelte for example -->
     <!-- <Image src="src/lib/assets/ravelry/poppop_dagrun_luggar.jpg" alt="test"></Image> -->
     {#each indices as index} 
     <!-- just repeating this pattern for background texture -->

@@ -19,36 +19,62 @@
 
     .image-container {
         width: 33%;
-        height: 100%;
+        /* height: 100%; */
         /* padding-left: 5%; */
         /* text-align: left; */
     }
 
     .imageLeftAlign {
+        order: 0;
         margin-right: auto;
-        padding-left: 5%;    
+        padding-left: 15%;    
     }
 
-    .imageRightAlign {
+    .imageRightAlign { /* fix styling here */
+        order: 1;
         margin-left: auto;
-        padding-right: 5%;
+        padding-right: 15%;
+    }
+
+    .text-container {
+        width: 33%;
+    }
+
+    .textLeftAlign {
+        order: 0;
+        margin-right: auto;
+        padding-left: 15%;
+    }
+
+    .textRightAlign {
+        order: 1;
+        margin-left: auto;
+        padding-right: 15%;
     }
 
     h1 {
         text-align: center;
     }
 
+    .page-container {
+        display: flex;
+        align-items: center;
+    }
+
 </style>
 
 <!-- has slug, title, img_src -- needs desc? -->
 <div style={`height: 100vh; background-color:${mainColor};`}>
- <h1>{title}</h1>
+  <h1>{title}</h1>
+<div class="page-container" >
 
  <div class={["image-container", (imageAlign? "imageRightAlign": "imageLeftAlign")]}>
     <img src={image} style={`border: solid ${r(3, 10)}px ${complementaryColor};`} alt="Placeholder"/>
  </div>
 
-<p>
-    {description}
-</p>
+    <div class={["text-container", (imageAlign? "textLeftAlign" : "textRightAlign")]}>
+        {description}
+    </div>
+
+</div>
 </div>
