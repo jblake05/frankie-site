@@ -60,7 +60,7 @@
     /* MOBILE CSS */
     @media only screen and (max-width: 600px) {
         .image-container {
-            width: 33%;
+            max-width: 20%;
         }
 
         .imageLeftAlign {
