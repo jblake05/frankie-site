@@ -17,39 +17,81 @@
 
 <style>
 
-    .image-container {
-        width: 33%;
-        /* height: 100%; */
-        /* padding-left: 5%; */
-        /* text-align: left; */
+    /* DESKTOP CSS */
+    @media only screen and (min-width: 600px) {
+        .image-container {
+            width: 33%;
+        }
+
+        .imageLeftAlign {
+            order: 0;
+            margin-right: auto;
+            padding-left: 15%;    
+        }
+
+        .imageRightAlign { /* fix styling here */
+            order: 1;
+            margin-left: auto;
+            padding-right: 15%;
+        }
+
+        .text-container {
+            width: 33%;
+        }
+
+        .textLeftAlign {
+            order: 0;
+            margin-right: auto;
+            padding-left: 15%;
+        }
+
+        .textRightAlign {
+            order: 1;
+            margin-left: auto;
+            padding-right: 15%;
+        }
+
+        .page-container {
+            display: flex;
+            align-items: center;
+        }
     }
 
-    .imageLeftAlign {
-        order: 0;
-        margin-right: auto;
-        padding-left: 15%;    
-    }
+    /* MOBILE CSS */
+    @media only screen and (max-width: 600px) {
+        .image-container {
+            width: 25%;
+            height: auto;
+        }
 
-    .imageRightAlign { /* fix styling here */
-        order: 1;
-        margin-left: auto;
-        padding-right: 15%;
-    }
+        .imageLeftAlign {
+            float: left;
+        }
 
-    .text-container {
-        width: 33%;
-    }
+        .imageRightAlign { /* fix styling here */
+            float: right;
+        }
 
-    .textLeftAlign {
-        order: 0;
-        margin-right: auto;
-        padding-left: 15%;
-    }
+        .text-container {
+            width: 10%;
+        }
 
-    .textRightAlign {
-        order: 1;
-        margin-left: auto;
-        padding-right: 15%;
+        .textLeftAlign {
+            float: left;
+        }
+
+        .textRightAlign {
+            float: right;
+        }
+
+        img{
+            width: 10%;
+        }
+
+        h1 {
+            font-size: 1px;
+        }
+        
     }
 
     h1 {
@@ -57,8 +99,7 @@
     }
 
     .page-container {
-        display: flex;
-        align-items: center;
+        width: 100%;
     }
 
 </style>
